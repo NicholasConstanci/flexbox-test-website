@@ -1,0 +1,128 @@
+html {
+    /* background-image: url('https://static1.e621.net/data/f8/49/f849d6a876cfd1e313997677a17c0f11.jpg');
+  background-repeat: no-repeat;
+  background-size: contain; */
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #eed9f1, #d9b3eb);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(221, 174, 193);
+    border-bottom: 3px ridge  rgb(116, 27, 128);
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.brand {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font-family: Bree, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-buttons {
+    text-align: right;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.body {
+    display: flex;
+    padding: 80px 0px 30px 0px;
+}
+
+.left-column,
+.center-column,
+.right-column {
+    /* border: 1px solid red; */
+    flex: 1 1 33%;
+    padding: 0 20px;
+    height: 50vh;
+}
+
+.center-column {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    height: 100vh;
+}
+
+.footer {
+    display: flex;
+    background-color: #111;
+    color: #fff;
+    justify-content: space-around;
+    padding: 50px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+}
+
+.footer div {
+    flex-basis: 20%;
+    border: 1px solid blue;
+}
+
+@media(max-height: 400px){
+    .footer{ display: none}
+}
+
+@media(max-width: 700px) {
+    .body,
+    .footer {
+        flex-wrap: wrap;
+    }
+    .footer div {
+        flex-basis: 48.6%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid white;
+        margin-bottom: 10px;
+    }
+    .left-column,
+    .center-column,
+    .right-column {
+        flex-basis: 100%;
+        flex-shrink: 0;
+    }
+    .center-column {
+        order: 1
+    }
+    .left-column {
+        order: 2
+    }
+    .right-column {
+        order: 3;
+        display: none;
+    }
+}
